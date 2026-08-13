@@ -1,36 +1,127 @@
-body {
-    font-family: Arial, sans-serif;
+/* ==========================================================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
     margin: 0;
-    background: #f4f4f4;
-    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    background: #0056b3;
-    color: white;
-    padding: 20px;
+body {
+    background-color: #f4f7f6;
+    color: #333333;
+    line-height: 1.6;
 }
 
-.box {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 500px;
-    border-radius: 8px;
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO (.header, .header-logo, .header-nav)
+   ========================================================================== */
+.header {
+    background-color: #0d3b66;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.btn {
-    background: #28a745;
-    color: white;
-    padding: 10px 20px;
+.header-logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header-nav .nav-link {
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-footer {
-    background: #333;
-    color: white;
-    padding: 10px;
-    margin-top: 30px;
+.header-nav .nav-link:hover {
+    color: #f4d35e;
 }
+
+/* ==========================================================================
+   3. BANNER PRINCIPAL (.hero-section, .hero-content, .btn-primary)
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(rgba(13, 59, 102, 0.75), rgba(13, 59, 102, 0.75)), 
+                url('https://images.unsplash.com/photo-1574258495973-f010dfbb5371?q=80&w=1000') center/cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #f4d35e;
+    color: #0d3b66;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ee964b;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   4. SEÇÕES E CARDS (.section-container, .cards-grid, .card)
+   ========================================================================== */
+.section-container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0d3b66;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    padding: 2rem 1.5rem;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px

@@ -1,156 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tudo Sobre LED</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador LED / OLED</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-        body {
-            background-color: #0f172a;
-            color: #f8fafc;
-            line-height: 1.6;
-        }
+    h1 {
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc;
+    }
 
-        header {
-            background: linear-gradient(135deg, #2563eb, #3b82f6);
-            padding: 3rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
-        }
+    /* Simulação da Tela OLED */
+    .oled-screen {
+      width: 300px;
+      height: 150px;
+      background-color: #000000;
+      border: 4px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: #ffffff;
-        }
+    .oled-text {
+      color: #00ffcc;
+      font-size: 18px;
+      text-shadow: 0 0 5px #00ffcc;
+      margin: 5px 0;
+    }
 
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
+    /* Simulação do LED */
+    .led-indicator {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #333;
+      margin-top: 15px;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
 
-        container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-            display: block;
-        }
+    .led-on {
+      background-color: #ff0055;
+      box-shadow: 0 0 15px #ff0055, 0 0 30px #ff0055;
+    }
 
-        section {
-            background-color: #1e293b;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 12px;
-            border: 1px solid #334155;
-        }
+    .controls {
+      margin-top: 20px;
+    }
 
-        h2 {
-            color: #60a5fa;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
+    button {
+      background-color: #00ffcc;
+      border: none;
+      color: #000;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+      margin: 5px;
+    }
 
-        p {
-            margin-bottom: 1rem;
-            color: #cbd5e1;
-        }
+    button:hover {
+      background-color: #00cca3;
+    }
 
-        ul {
-            list-style-type: square;
-            margin-left: 1.5rem;
-            color: #cbd5e1;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .card {
-            background-color: #0f172a;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #3b82f6;
-        }
-
-        .card h3 {
-            color: #f8fafc;
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #64748b;
-            font-size: 0.9rem;
-            border-top: 1px solid #1e293b;
-        }
-    </style>
+    a {
+      color: #888;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Tecnologia LED</h1>
-        <p>A iluminação eficiente que move o mundo moderno</p>
-    </header>
+  <h1>Painel do Display OLED</h1>
 
-    <container>
-        <section>
-            <h2>O que é um LED?</h2>
-            <p><strong>LED</strong> é a sigla para <em>Light Emitting Diode</em> (Diodo Emissor de Luz). Trata-se de um componente eletrônico semicondutor que transforma energia elétrica diretamente em luz por meio de um processo chamado eletroluminescência.</p>
-        </section>
+  <div class="oled-screen">
+    <div class="oled-text" id="status-text">SYSTEM: OFF</div>
+    <div class="oled-text" id="temp-text">TEMP: -- °C</div>
+  </div>
 
-        <section>
-            <h2>Como Funciona?</h2>
-            <p>Ao contrário das lâmpadas incandescentes tradicionais (que geram luz aquecendo um filamento), o LED gera luz através da movimentação de elétrons em um material semicondutor.</p>
-            <p>Esse processo é extremamente eficiente, pois minimiza a perda de energia em forma de calor.</p>
-        </section>
+  <div class="led-indicator" id="led"></div>
 
-        <section>
-            <h2>Principais Vantagens</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Alta Eficiência</h3>
-                    <p>Consome até 80% menos energia do que as lâmpadas tradicionais para gerar a mesma quantidade de luz.</p>
-                </div>
-                <div class="card">
-                    <h3>Longa Durabilidade</h3>
-                    <p>A vida útil média pode ultrapassar 25.000 a 50.000 horas de uso contínuo.</p>
-                </div>
-                <div class="card">
-                    <h3>Sustentabilidade</h3>
-                    <p>Não utiliza mercúrio ou elementos nocivos em sua composição, sendo 100% reciclável.</p>
-                </div>
-            </div>
-        </section>
+  <div class="controls">
+    <button onclick="toggleSystem()">Ligar / Desligar</button>
+  </div>
 
-        <section>
-            <h2>Aplicações Comuns</h2>
-            <ul>
-                <li>Iluminação residencial e comercial pública</li>
-                <li>Telas de TVs, monitores e smartphones (LED, OLED, MicroLED)</li>
-                <li>Faróis e iluminação automotiva</li>
-                <li>Indicadores visuais em aparelhos eletrônicos</li>
-            </ul>
-        </section>
-    </container>
+  <a href="docs.html">Ver Documentação do Projeto →</a>
 
-    <footer>
-        <p>&copy; 2026 - Guia Informativo sobre LEDs</p>
-    </footer>
+  <script>
+    let isOn = false;
+
+    function toggleSystem() {
+      isOn = !isOn;
+      const statusText = document.getElementById('status-text');
+      const tempText = document.getElementById('temp-text');
+      const led = document.getElementById('led');
+
+      if (isOn) {
+        statusText.innerText = "SYSTEM: READY";
+        tempText.innerText = "TEMP: 24.5 °C";
+        led.classList.add('led-on');
+      } else {
+        statusText.innerText = "SYSTEM: OFF";
+        tempText.innerText = "TEMP: -- °C";
+        led.classList.remove('led-on');
+      }
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentação - Projeto LED/OLED</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #00ffcc;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Documentação do Projeto OLED & LED</h1>
+  <p>Bem-vindo à página de especificações do projeto de monitoramento simulado.</p>
+
+  <div class="card">
+    <h2>Componentes Simulados</h2>
+    <ul>
+      <li><strong>Display OLED:</strong> Tela monocromática com emissão de luz por contraste para alta visibilidade.</li>
+      <li><strong>LED Indicador:</strong> Diodo emissor de luz usado para indicar estado de energia do circuito.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Como Funciona</h2>
+    <p>O script no arquivo principal alterna o estado lógico do sistema simulado entre ligado e desligado, alterando a renderização CSS do LED e do display OLED.</p>
+  </div>
+
+  <p><a href="index.html">← Voltar ao Painel Principal</a></p>
 
 </body>
 </html>

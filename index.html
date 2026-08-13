@@ -3,81 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ótica Lumina - Estilo e Visão</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tudo Sobre LED</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            display: block;
+        }
+
+        section {
+            background-color: #1e293b;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        h2 {
+            color: #60a5fa;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 1.5rem;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background-color: #0f172a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .card h3 {
+            color: #f8fafc;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid #1e293b;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo">
-            <h1>Ótica <span>Lumina</span></h1>
-        </div>
-        <nav class="nav">
-            <a href="#inicio">Início</a>
-            <a href="#colecao">Coleções</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-        </nav>
+    <header>
+        <h1>Tecnologia LED</h1>
+        <p>A iluminação eficiente que move o mundo moderno</p>
     </header>
 
-    <section class="hero" id="inicio">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2>Sua visão com mais estilo e clareza</h2>
-            <p>Descubra armações exclusivas e lentes de alta tecnologia para o seu dia a dia.</p>
-            <a href="#colecao" class="btn">Explorar Coleção</a>
-        </div>
-    </section>
+    <container>
+        <section>
+            <h2>O que é um LED?</h2>
+            <p><strong>LED</strong> é a sigla para <em>Light Emitting Diode</em> (Diodo Emissor de Luz). Trata-se de um componente eletrônico semicondutor que transforma energia elétrica diretamente em luz por meio de um processo chamado eletroluminescência.</p>
+        </section>
 
-    <section class="container" id="colecao">
-        <h2 class="title">Nossas Coleções</h2>
-        
-        <div class="grid-cards">
-            <article class="card">
-                <div class="card-img-container">
-                    <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80" alt="Óculos de Sol">
-                </div>
-                <div class="card-body">
-                    <h3>Óculos de Sol</h3>
-                    <p>Design moderno e proteção total contra raios UV para qualquer ocasião.</p>
-                </div>
-            </article>
+        <section>
+            <h2>Como Funciona?</h2>
+            <p>Ao contrário das lâmpadas incandescentes tradicionais (que geram luz aquecendo um filamento), o LED gera luz através da movimentação de elétrons em um material semicondutor.</p>
+            <p>Esse processo é extremamente eficiente, pois minimiza a perda de energia em forma de calor.</p>
+        </section>
 
-            <article class="card">
-                <div class="card-img-container">
-                    <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?auto=format&fit=crop&w=600&q=80" alt="Óculos de Grau">
+        <section>
+            <h2>Principais Vantagens</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Alta Eficiência</h3>
+                    <p>Consome até 80% menos energia do que as lâmpadas tradicionais para gerar a mesma quantidade de luz.</p>
                 </div>
-                <div class="card-body">
-                    <h3>Óculos de Grau</h3>
-                    <p>Armações leves, resistentes e feitas para se adaptar ao seu estilo.</p>
+                <div class="card">
+                    <h3>Longa Durabilidade</h3>
+                    <p>A vida útil média pode ultrapassar 25.000 a 50.000 horas de uso contínuo.</p>
                 </div>
-            </article>
+                <div class="card">
+                    <h3>Sustentabilidade</h3>
+                    <p>Não utiliza mercúrio ou elementos nocivos em sua composição, sendo 100% reciclável.</p>
+                </div>
+            </div>
+        </section>
 
-            <article class="card">
-                <div class="card-img-container">
-                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Lentes de Contato">
-                </div>
-                <div class="card-body">
-                    <h3>Lentes de Contato</h3>
-                    <p>Conforto e hidratação prolongada para a sua rotina diária.</p>
-                </div>
-            </article>
-        </div>
-    </section>
+        <section>
+            <h2>Aplicações Comuns</h2>
+            <ul>
+                <li>Iluminação residencial e comercial pública</li>
+                <li>Telas de TVs, monitores e smartphones (LED, OLED, MicroLED)</li>
+                <li>Faróis e iluminação automotiva</li>
+                <li>Indicadores visuais em aparelhos eletrônicos</li>
+            </ul>
+        </section>
+    </container>
 
-    <section class="container sobre-section" id="sobre">
-        <div class="sobre-img">
-            <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=800&q=80" alt="Interior da Ótica">
-        </div>
-        <div class="sobre-info">
-            <h2>Tecnologia e Cuidado Visual</h2>
-            <p>Na Ótica Lumina, combinamos atendimento especializado com equipamentos de ponta para garantir o exame perfeito e a escolha certa da sua armação.</p>
-        </div>
-    </section>
-
-    <footer class="footer" id="contato">
-        <p>&copy; 2026 Ótica Lumina. Todos os direitos reservados.</p>
-        <p>📍 Av. Visão, 1000 - São Paulo, SP | 📞 (11) 98888-7777</p>
+    <footer>
+        <p>&copy; 2026 - Guia Informativo sobre LEDs</p>
     </footer>
 
 </body>

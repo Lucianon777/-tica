@@ -3,58 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ótica Visão Clara - Seu Estilo, Sua Visão</title>
+    <title>Ótica Lumina - Estilo e Visão</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>👓 Ótica Visão Clara</h1>
-        <nav>
-            <a href="#home">Início</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#sobre">Sobre Nós</a>
+    <header class="header">
+        <div class="logo">
+            <h1>Ótica <span>Lumina</span></h1>
+        </div>
+        <nav class="nav">
+            <a href="#inicio">Início</a>
+            <a href="#colecao">Coleções</a>
+            <a href="#sobre">Sobre</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
 
-    <section class="hero" id="home">
-        <h2>Enxergue o mundo com mais estilo</h2>
-        <p>As melhores marcas de óculos de grau e de sol com condições especiais.</p>
-        <a href="#produtos" class="btn">Ver Coleção</a>
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Sua visão com mais estilo e clareza</h2>
+            <p>Descubra armações exclusivas e lentes de alta tecnologia para o seu dia a dia.</p>
+            <a href="#colecao" class="btn">Explorar Coleção</a>
+        </div>
     </section>
 
-    <div class="container" id="produtos">
-        <h2 class="section-title">Nossos Serviços e Produtos</h2>
+    <section class="container" id="colecao">
+        <h2 class="title">Nossas Coleções</h2>
         
-        <div class="cards">
-            <div class="card">
-                <h3>🕶️ Óculos de Sol</h3>
-                <p>Proteção UV400 com o máximo de estilo para os seus dias ensolarados.</p>
-            </div>
+        <div class="grid-cards">
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80" alt="Óculos de Sol">
+                </div>
+                <div class="card-body">
+                    <h3>Óculos de Sol</h3>
+                    <p>Design moderno e proteção total contra raios UV para qualquer ocasião.</p>
+                </div>
+            </article>
 
-            <div class="card">
-                <h3>👓 Óculos de Grau</h3>
-                <p>Armações leves e confortáveis para combinar com o seu estilo de vida.</p>
-            </div>
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?auto=format&fit=crop&w=600&q=80" alt="Óculos de Grau">
+                </div>
+                <div class="card-body">
+                    <h3>Óculos de Grau</h3>
+                    <p>Armações leves, resistentes e feitas para se adaptar ao seu estilo.</p>
+                </div>
+            </article>
 
-            <div class="card">
-                <h3>🔍 Lentes de Contato</h3>
-                <p>Lentes de grau e estéticas com alta tecnologia e hidratação.</p>
-            </div>
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Lentes de Contato">
+                </div>
+                <div class="card-body">
+                    <h3>Lentes de Contato</h3>
+                    <p>Conforto e hidratação prolongada para a sua rotina diária.</p>
+                </div>
+            </article>
         </div>
-    </div>
+    </section>
 
-    <div class="container" id="sobre">
-        <h2 class="section-title">Sobre A Visão Clara</h2>
-        <p class="sobre-texto">
-            Há mais de 10 anos oferecendo atendimento personalizado, exames de vista modernos e as melhores armações do mercado para garantir a sua saúde visual.
-        </p>
-    </div>
+    <section class="container sobre-section" id="sobre">
+        <div class="sobre-img">
+            <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=800&q=80" alt="Interior da Ótica">
+        </div>
+        <div class="sobre-info">
+            <h2>Tecnologia e Cuidado Visual</h2>
+            <p>Na Ótica Lumina, combinamos atendimento especializado com equipamentos de ponta para garantir o exame perfeito e a escolha certa da sua armação.</p>
+        </div>
+    </section>
 
-    <footer id="contato">
-        <p>&copy; 2026 Ótica Visão Clara - Todos os direitos reservados.</p>
-        <p>📍 Rua Principal, 123 - Centro | 📞 (00) 99999-8888</p>
+    <footer class="footer" id="contato">
+        <p>&copy; 2026 Ótica Lumina. Todos os direitos reservados.</p>
+        <p>📍 Av. Visão, 1000 - São Paulo, SP | 📞 (11) 98888-7777</p>
     </footer>
 
 </body>

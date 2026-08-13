@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Secundário - LED / OLED</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Display OLED (Painel 2)</h1>
+
+  <div class="oled-screen">
+    <div class="oled-text" id="status-text">SYSTEM: OFF</div>
+    <div class="oled-text" id="temp-text">TEMP: -- °C</div>
+  </div>
+
+  <div class="led-indicator" id="led"></div>
+
+  <div class="controls">
+    <button id="toggle-btn">Ligar / Desligar</button>
+  </div>
+
+  <a href="index.html" class="link-docs">← Voltar ao Painel Principal</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

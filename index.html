@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulador LED / OLED</title>
+  <title>Simulador OLED & LED</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Simulador Display OLED (128x64) & LED</h1>
 
-  <h1>Painel do Display OLED</h1>
+  <div class="container">
+    <!-- LED Físico Simulado -->
+    <div class="led-box">
+      <div id="led" class="led-off"></div>
+      <p>Status do LED: <span id="led-status">DESLIGADO</span></p>
+    </div>
 
-  <div class="oled-screen">
-    <div class="oled-text" id="status-text">SYSTEM: OFF</div>
-    <div class="oled-text" id="temp-text">TEMP: -- °C</div>
+    <!-- Tela OLED Simulada -->
+    <div class="oled-box">
+      <canvas id="oledScreen" width="128" height="64"></canvas>
+    </div>
   </div>
-
-  <div class="led-indicator" id="led"></div>
 
   <div class="controls">
-    <button id="toggle-btn">Ligar / Desligar</button>
+    <button onclick="toggleLED()">Alternar LED</button>
+    <button onclick="drawOLEDText()">Escrever no OLED</button>
+    <button onclick="clearOLED()">Limpar Tela</button>
   </div>
-
-  <a href="docs.html" class="link-docs">Ver Documentação do Projeto →</a>
 
   <script src="script.js"></script>
 </body>

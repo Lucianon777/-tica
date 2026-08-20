@@ -3,31 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulador OLED & LED</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Painel LED OLED</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000000; /* Preto absoluto para efeito OLED */
+      color: #ffffff;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .oled-container {
+      border: 4px solid #1a1a1a;
+      border-radius: 16px;
+      padding: 30px;
+      background-color: #030303;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.15);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    /* Efeito de matriz de pontos do LED */
+    .led-screen {
+      background-color: #000;
+      border: 2px solid #00ffcc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.4), inset 0 0 10px rgba(0, 255, 204, 0.2);
+    }
+
+    .led-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00ffcc;
+      text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+      letter-spacing: 2px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    button {
+      background-color: #111;
+      color: #00ffcc;
+      border: 1px solid #00ffcc;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #00ffcc;
+      color: #000;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+  </style>
 </head>
 <body>
-  <h1>Simulador Display OLED (128x64) & LED</h1>
 
-  <div class="container">
-    <!-- LED Físico Simulado -->
-    <div class="led-box">
-      <div id="led" class="led-off"></div>
-      <p>Status do LED: <span id="led-status">DESLIGADO</span></p>
+  <div class="oled-container">
+    <div class="led-screen">
+      <div id="display" class="led-text">OLED ATIVO</div>
     </div>
 
-    <!-- Tela OLED Simulada -->
-    <div class="oled-box">
-      <canvas id="oledScreen" width="128" height="64"></canvas>
+    <div class="controls">
+      <button onclick="mudarCor('#00ffcc')">Ciano</button>
+      <button onclick="mudarCor('#ff0055')">Rosa</button>
+      <button onclick="mudarCor('#ffcc00')">Amarelo</button>
+      <button onclick="mudarCor('#00ff00')">Verde</button>
     </div>
   </div>
 
-  <div class="controls">
-    <button onclick="toggleLED()">Alternar LED</button>
-    <button onclick="drawOLEDText()">Escrever no OLED</button>
-    <button onclick="clearOLED()">Limpar Tela</button>
-  </div>
+  <script>
+    function mudarCor(cor) {
+      const display = document.getElementById('display');
+      const screen = document.querySelector('.led-screen');
 
-  <script src="script.js"></script>
+      display.style.color = cor;
+      display.style.textShadow = `0 0 5px ${cor}, 0 0 10px ${cor}, 0 0 20px ${cor}`;
+      screen.style.borderColor = cor;
+      screen.style.boxShadow = `0 0 15px ${cor}66, inset 0 0 10px ${cor}33`;
+    }
+  </script>
+
 </body>
 </html>

@@ -3,113 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnologia LED vs OLED</title>
+    <title>LED vs OLED: Entenda as Diferenças</title>
     <style>
-        :root {
-            --primary: #2563eb;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --gray: #64748b;
-        }
         body {
-            font-family: system-ui, -apple-system, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light);
-            color: var(--dark);
+            font-family: Arial, sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
         }
         header {
-            background: var(--dark);
-            color: white;
             text-align: center;
-            padding: 3rem 1rem;
-        }
-        header h1 { margin: 0 0 0.5rem 0; font-size: 2.5rem; }
-        header p { color: var(--gray); font-size: 1.2rem; }
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        section {
-            background: white;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
         }
-        h2 { color: var(--primary); margin-top: 0; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            justify-content: center;
         }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        th { background-color: #f1f5f9; }
-        footer {
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            padding: 20px;
             text-align: center;
-            padding: 1.5rem;
-            color: var(--gray);
-            font-size: 0.9rem;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        .comparison-table {
+            width: 100%;
+            max-width: 650px;
+            margin: 300px auto 0 auto;
+            margin-top: 30px;
+            border-collapse: collapse;
+            background: #fff;
+        }
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        .comparison-table th {
+            background-color: #1a1a1a;
+            color: white;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>LED vs. OLED</h1>
-        <p>Entenda as diferenças entre as principais tecnologias de telas atuais</p>
+        <h1>Tecnologia de Display: LED vs OLED</h1>
+        <p>Descubra a diferença entre as duas principais tecnologias de tela do mercado.</p>
     </header>
-    <main>
-        <section>
-            <h2>O que é LED?</h2>
-            <p>A tecnologia <strong>LED</strong> (Light Emitting Diode) utiliza uma camada de retroiluminação traseira para iluminar os pixels de cristal líquido (LCD). É amplamente utilizada devido ao seu alto brilho e excelente custo-benefício no mercado.</p>
-        </section>
-        <section>
-            <h2>O que é OLED?</h2>
-            <p>A tecnologia <strong>OLED</strong> (Organic Light Emitting Diode) funciona com pixels auto-iluminados. Cada pixel gera sua própria luz e cor de forma independente, o que permite que sejam completamente desligados para produzir pretos absolutos e taxas de contraste infinitas.</p>
-        </section>
-        <section>
-            <h2>Comparativo Técnico</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Característica</th>
-                        <th>LED (LCD)</th>
-                        <th>OLED</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Nível de Preto</strong></td>
-                        <td>Cinza escuro (vazamento de luz)</td>
-                        <td>Preto absoluto (pixel desligado)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Contraste</strong></td>
-                        <td>Alto, mas limitado pela retroiluminação</td>
-                        <td>Infinito</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Brilho Máximo</strong></td>
-                        <td>Geralmente mais alto em cenas claras prolongadas</td>
-                        <td>Moderado a alto</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Espessura do Painel</strong></td>
-                        <td>Mais espesso devido ao painel de luz traseiro</td>
-                        <td>Ultra-fino</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Guia de Tecnologias de Tela.</p>
-    </footer>
+
+    <div class="container">
+        <!-- Card LED -->
+        <div class="card">
+            <h2>Telas LED</h2>
+            <!-- Substitua o link abaixo pela URL da sua imagem -->
+            <img src="https://via.placeholder.com/300x200?text=Painel+LED" alt="Painel LED">
+            <p>Utilizam retroiluminação (backlight) para iluminarem os pixels de cristal líquido. Oferecem alto brilho e excelente custo-benefício.</p>
+        </div>
+
+        <!-- Card OLED -->
+        <div class="card">
+            <h2>Telas OLED</h2>
+            <!-- Substitua o link abaixo pela URL da sua imagem -->
+            <img src="https://via.placeholder.com/300x200?text=Painel+OLED" alt="Painel OLED">
+            <p>Cada pixel emite sua própria luz e pode se desligar individualmente, garantindo pretos perfeitos e contraste infinito.</p>
+        </div>
+    </div>
+
+    <!-- Tabela Comparativa -->
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Recurso</th>
+                <th>LED</th>
+                <th>OLED</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Nível de Preto</strong></td>
+                <td>Cinza-escuro (com iluminação de fundo)</td>
+                <td>Preto Perfeito (pixels desligados)</td>
+            </tr>
+            <tr>
+                <td><strong>Brilho Máximo</strong></td>
+                <td>Muito Alto</td>
+                <td>Moderado a Alto</td>
+            </tr>
+            <tr>
+                <td><strong>Ângulo de Visão</strong></td>
+                <td>Médio</td>
+                <td>Excelente</td>
+            </tr>
+        </tbody>
+    </table>
+
 </body>
 </html>
